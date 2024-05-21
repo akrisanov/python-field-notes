@@ -8,7 +8,7 @@ idna==2.9
 pathspec==0.8.0
 python-dateutil==2.8.1
 regex==2020.4.4
-requests==2.31.0
+requests==2.32.0
 six==1.14.0
 toml==0.10.0
 typed-ast==1.4.1
