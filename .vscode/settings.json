@@ -1,6 +1,8 @@
 {
-    "python.pythonPath": ".venv/bin/python3",
-    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
     "files.watcherExclude": {
         "**/target": true
     }

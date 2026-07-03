@@ -1,0 +1,28 @@
+[project]
+name = "python-field-notes"
+version = "0.2.0"
+description = "Personal learning notes, examples, and exercises for Python"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["ipython==9.15.0", "jupyterlab==4.6.1", "pyjanitor==0.32.23"]
+
+[dependency-groups]
+dev = ["hypothesis==6.155.7", "ruff==0.15.20", "ty==0.0.56"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+force-sort-within-sections = true
+
+[tool.uv]
+package = false
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"

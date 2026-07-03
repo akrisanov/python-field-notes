@@ -11,27 +11,30 @@ This repository combines:
 
 ## Quick Start
 
-### 1. Create and activate a virtual environment
+### 1. Install with uv
 
 ```shell
-python3 -m venv .venv
-source .venv/bin/activate
+uv sync
 ```
 
-### 2. Install dependencies
+This creates and manages a project environment from `pyproject.toml`.
+
+Run tools with `uv run`:
 
 ```shell
-pip install -r requirements.txt
+uv run jupyter lab
+# or
+uv run jupyter notebook
 ```
 
-### 3. Launch Jupyter
+### 2. Launch Jupyter
 
 You can use either Jupyter Notebook or JupyterLab:
 
 ```shell
-jupyter notebook
+uv run jupyter notebook
 # or
-jupyter lab
+uv run jupyter lab
 ```
 
 ## Repository Structure
@@ -65,6 +68,12 @@ Then inspect built-in docs, for example:
 ```pycon
 >>> help(str)
 >>> help(str.upper)
+```
+
+If you use uv, you can also start IPython with:
+
+```shell
+uv run ipython
 ```
 
 ## References
