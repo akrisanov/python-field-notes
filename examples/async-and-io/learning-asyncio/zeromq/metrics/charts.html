@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Server Performance</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothie/1.34.0/smoothie.min.js"></script>
+    <script type="text/javascript">
+        function createTimeline() {
+            var cpu = {};
+            var mem = {};
+
+            var chart_props = {
+                responsive: true, enableDpiScaling: false, millisPerPixel: 100, grid: {
+                    millisPerLine: 4000,
+                    fillStyle: '#ffffff',
+                    strokeStyle: 'rgba(0,0,0,0.08)',
+                    verticalSections: 10
+                },
+                labels: { fillStyle: '#000000', fontSize: 18 },
+                timestampFormatter: SmoothieChart.timeFormatter,
+                maxValue: 100,
+                minValue: 0
+            };
+
+            var cpu_chart = new SmoothieChart(chart_props);
+            var mem_chart = new SmoothieChart(chart_props);
+
+            function add_timeseries(obj, chart, color) {
+                obj[color] = new TimeSeries(); chart.addTimeSeries(obj[color], {
+                    strokeStyle: color,
+                    lineWidth: 4
+                })
+            }
+
+            var evtSource = new EventSource("/feed");
+            evtSource.onmessage = function (e) {
+                var obj = JSON.parse(e.data); if (!(obj.color in cpu)) {
+                    add_timeseries(cpu, cpu_chart, obj.color);
+                }
+                if (!(obj.color in mem)) {
+                    add_timeseries(mem, mem_chart, obj.color);
+                }
+                cpu[obj.color].append(
+                    Date.parse(obj.timestamp), obj.cpu);
+                mem[obj.color].append(
+                    Date.parse(obj.timestamp), obj.mem);
+            };
+
+            cpu_chart.streamTo(
+                document.getElementById("cpu_chart"), 1000
+            );
+            mem_chart.streamTo(
+                document.getElementById("mem_chart"), 1000
+            );
+        }
+    </script>
+    <style>
+        h1 {
+            text-align: center;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body onload="createTimeline()">
+    <h1>CPU (%)</h1>
+    <canvas id="cpu_chart" style="width:100%; height:300px"></canvas>
+
+    <hr>
+    <h1>Memory usage (MB)</h1>
+    <canvas id="mem_chart" style="width:100%; height:300px"></canvas>
+</body>
+
+</html>

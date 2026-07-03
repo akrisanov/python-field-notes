@@ -6,6 +6,6 @@
 ## Sections
 
 - `notes/`: long-form learning notes and notebooks.
-- `exercises/`: assignment-style practice and course work.
-- `examples/`: runnable snippets, experiments, and package-layout examples.
+- `exercises/`: assignment-style practice and course work, including `books/python-workout/`.
+- `examples/`: runnable snippets and experiments, including `async-and-io/learning-asyncio/`.
 - `tooling/`: environment and editor setup notes.
