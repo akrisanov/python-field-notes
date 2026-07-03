@@ -39,23 +39,24 @@ uv run jupyter lab
 
 ## Repository Structure
 
-- `assets/`: supporting scripts, fixtures, and tests for smaller exercises
-- `coursera/`: solutions and materials from Coursera Python courses
-- `frameworks/`: framework-related notes (for example, Django notebook)
-- `packages/`: package-focused examples (`numpy`, `matplotlib`, `sqlalchemy`, `logging`, `itertools`, and more)
-- `packagesample/`: a minimal Python package layout example.
-- `tips_and_tricks/`: concise practical examples and experiments
+- `docs/`: repository navigation and learning-path docs
+- `notes/tutorial/`: core Python notes from basics to advanced topics (functions, classes, generators, regex, testing, performance, serialization, concurrency)
+- `notes/packages/`: package-focused examples (`numpy`, `matplotlib`, `sqlalchemy`, `logging`, `itertools`, and more)
+- `notes/tips_and_tricks/`: concise practical examples and experiments
+- `notes/frameworks/`: framework-related notes (for example, Django notebook)
+- `exercises/coursera/`: solutions and materials from Coursera Python courses
+- `examples/assets/`: supporting scripts, fixtures, and tests for smaller exercises
+- `examples/packagesample/`: a minimal Python package layout example
 - `tooling/`: development environment notes (virtual environments, VS Code, docs)
-- `tutorial/`: core Python notes from basics to advanced topics (functions, classes, generators, regex, testing, performance, serialization, concurrency)
 
 ## Using the Repository
 
 ### Learning path suggestion
 
-1. Start with `tutorial/00_intro.ipynb` and follow files in order.
-2. Explore `packages/` when you need targeted package examples.
-3. Use `tips_and_tricks/` for quick practical patterns.
-4. Check `coursera/` for assignment-style practice.
+1. Start with `notes/tutorial/00_intro.ipynb` and follow files in order.
+2. Explore `notes/packages/` when you need targeted package examples.
+3. Use `notes/tips_and_tricks/` for quick practical patterns.
+4. Check `exercises/coursera/` for assignment-style practice.
 
 ### Working in VS Code REPL
 
