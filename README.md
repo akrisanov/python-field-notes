@@ -48,6 +48,7 @@ uv run jupyter lab
 - `exercises/books/python-workout/`: chapter-based Python Workout exercises
 - `exercises/testing/learning-pytest/`: chapter-based pytest learning project
 - `examples/async-and-io/learning-asyncio/`: async programming and networking examples
+- `examples/databases/learning-sqlalchemy/`: SQLAlchemy querying and ORM examples
 - `examples/assets/`: supporting scripts, fixtures, and tests for smaller exercises
 - `examples/packagesample/`: a minimal Python package layout example
 - `tooling/`: development environment notes (virtual environments, VS Code, docs)
@@ -63,6 +64,7 @@ uv run jupyter lab
 5. Practice book-style tasks in `exercises/books/python-workout/`.
 6. Practice testing-focused tasks in `exercises/testing/learning-pytest/`.
 7. Explore async examples in `examples/async-and-io/learning-asyncio/`.
+8. Explore SQLAlchemy examples in `examples/databases/learning-sqlalchemy/`.
 
 ### Working in VS Code REPL
 

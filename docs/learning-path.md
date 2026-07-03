@@ -9,4 +9,5 @@ A practical route through this repository.
 5. Practice book-style exercises in `exercises/books/python-workout/`.
 6. Practice testing-focused tasks in `exercises/testing/learning-pytest/`.
 7. Explore async and I/O examples in `examples/async-and-io/learning-asyncio/`.
-8. Use additional runnable scripts in `examples/` for focused experiments.
+8. Explore SQLAlchemy examples in `examples/databases/learning-sqlalchemy/`.
+9. Use additional runnable scripts in `examples/` for focused experiments.
