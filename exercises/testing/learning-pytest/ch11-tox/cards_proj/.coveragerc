@@ -1,0 +1,5 @@
+[paths]
+; which source paths should be considered identical
+source =
+   src
+   .tox/*/site-packages

@@ -46,6 +46,7 @@ uv run jupyter lab
 - `notes/frameworks/`: framework-related notes (for example, Django notebook)
 - `exercises/coursera/`: solutions and materials from Coursera Python courses
 - `exercises/books/python-workout/`: chapter-based Python Workout exercises
+- `exercises/testing/learning-pytest/`: chapter-based pytest learning project
 - `examples/async-and-io/learning-asyncio/`: async programming and networking examples
 - `examples/assets/`: supporting scripts, fixtures, and tests for smaller exercises
 - `examples/packagesample/`: a minimal Python package layout example
@@ -60,7 +61,8 @@ uv run jupyter lab
 3. Use `notes/tips_and_tricks/` for quick practical patterns.
 4. Check `exercises/coursera/` for assignment-style practice.
 5. Practice book-style tasks in `exercises/books/python-workout/`.
-6. Explore async examples in `examples/async-and-io/learning-asyncio/`.
+6. Practice testing-focused tasks in `exercises/testing/learning-pytest/`.
+7. Explore async examples in `examples/async-and-io/learning-asyncio/`.
 
 ### Working in VS Code REPL
 
