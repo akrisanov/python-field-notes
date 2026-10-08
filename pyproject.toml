@@ -4,7 +4,7 @@ version = "0.2.0"
 description = "Personal learning notes, examples, and exercises for Python"
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = ["ipython==9.15.0", "jupyterlab==4.6.1", "pyjanitor==0.32.23"]
+dependencies = ["ipython==9.15.0", "jupyterlab==4.6.4", "pyjanitor==0.32.23"]
 
 [dependency-groups]
 dev = ["hypothesis==6.155.7", "ruff==0.15.20", "ty==0.0.56"]
